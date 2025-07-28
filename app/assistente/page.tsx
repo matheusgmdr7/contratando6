@@ -66,7 +66,7 @@ export default function FaleComConsultorPage() {
               suas necessidades.
             </p>
 
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={
                   dadosCliente?.nome && dadosCliente?.planoSelecionado
@@ -77,7 +77,20 @@ export default function FaleComConsultorPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-[#168979] rounded-lg shadow-lg hover:bg-[#13786a] transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#168979]/50"
               >
-                Falar com um consultor agora
+                Consultor Barreto
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              <a
+                href={
+                  dadosCliente?.nome && dadosCliente?.planoSelecionado
+                    ? `https://wa.me/5592999994404?text=Olá! Meu nome é ${dadosCliente.nome} e tenho interesse no plano ${dadosCliente.planoSelecionado.nome} da ${dadosCliente.planoSelecionado.operadora}.`
+                    : "https://wa.me/5592999994404?text=Olá! Gostaria de informações sobre planos de saúde."
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-[#25D366] rounded-lg shadow-lg hover:bg-[#128C7E] transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
+              >
+                Consultor Oliveira
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>
